@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- Bootstrap Icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            overflow-y: hidden;
+        }
+        
+        /* Reuseable class */
+        .color-gray {
+            color: gray;
+        }
+        
+        .background-color-green {
+            background-color: green;
+        }
+        
+        .background-color-blue {
+            background-color: rgb(25,103,210);
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        /* .clearfix {
+            clear: both;
+            display: block;
+            content: "";
+        } */
+        
+        /* Header section */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .logo {
+            /* width: 220px; */
+            height: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo a {
+            font-size: 22px;
+            color: #5f6368;
+        }
+        
+        .logo a:hover {
+            text-decoration: underline;
+        }
+        
+        .logo:hover {
+            cursor: pointer;
+        }
+        
+        .logo img {
+            /* width: 15%; */
+            height: 28px;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        .profile i{
+            font-size: 24px;
+        }
+        
+        main {
+            display: flex;
+            gap: 50px;
+        }
+        
+        /* side seciton */
+        .aside-section {
+            width: 23vw;
+            height: 100vh;
+            /* padding: 10px 0; */
+            border-right: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            /* position: fixed; */
+            /* gap: 30px; */
+        }
+        
+        .option-1,
+        .option-2,
+        .option-3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 15px 20px;
+            gap: 15px;
+        }
+        
+        .option-1 div,
+        .option-2 div,
+        .option-3 div {
+            display: flex;
+            /* flex-direction: column; */
+            align-items: center;
+            gap: 18px;
+            padding: 5px 0;
+            transition: all 0.3s;
+        }
+        
+        .option-1 div i,
+        .option-2 div i,
+        .option-3  div i{
+            font-size: 22px;
+        }
+        
+        .option-1 div a,
+        .option-2 div a,
+        .option-3  div a{
+            font-size: 14px;
+            color: #3c4043;
+            font-weight: 500;
+        }
+        
+        .option-1,
+        .option-2 {
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .active {
+            background-color: rgb(232,240,254);
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding-left: 10px !important;
+            cursor: pointer;
+        }
+        
+        .option-1 div:hover, 
+        .option-2 div:hover, 
+        .option-3 div:hover {
+            background-color: rgba(26,115,232,.12);
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding-left: 10px !important;
+            cursor: pointer;
+        }
+        
+        .alphabat {
+            padding: 10px;
+            font-size: 12px;
+            color: #fff;
+            border-radius: 50%;
+        }
+        
+        /* Card Section */
+        .section-card {
+            width: 73vw; 
+            padding: 40px 20px;
+
+        }
+        .card-container {
+            display: flex;
+            align-items: center;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .card {
+            width: 340px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        
+        .card-content {
+            padding: 12px 20px;
+            color: #fff;
+        }
+        
+        .card-content h3{
+            font-weight: 500;
+            margin-bottom: 5px;
+            transition: all 0.3s;
+        }
+        
+        .card-content span {
+            font-size: 14px;
+            font-weight: light;
+            transition: all 0.3s;
+        }
+        
+        .background01 {
+            background-image: url(img/background01.jpeg) ;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .background02 {
+            background-image: url(img/background02.jpeg) ;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .mentor-image {
+            text-align: right;
+            margin-right: 20px;
+            margin-top: -40px;
+        }
+        
+        .mentor-image img {
+            border-radius: 50%;
+        }
+        
+        .empty {
+            padding: 10px;
+        }
+        
+        .icon {
+            border-top: 1px solid #ccc;
+            padding: 10px 20px;
+            text-align: right;
+        }
+        
+        .icon i {
+            font-size: 22px;
+            margin-right: 10px;
+        }
+        
+        .card-content h3:hover,
+        .card-content span:hover {
+            text-decoration: underline #fff;
+            cursor: pointer;
+        }</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="d:\image11 - Copy.jpeg" alt="Google Classroom Logo">
+            <a href="#">Classroom</a>
+        </div>
+        <div class="profile">
+            <i class="bi bi-plus-lg"></i>
+            <i class="bi bi-grid-3x3-gap-fill"></i>
+            <i class="bi bi-person-circle color-gray"></i>
+        </div>
+    </header>
+    <main>
+        <aside class="aside-section">
+            <div class="option-1">
+                <div class="home active">
+                    <i class="bi bi-house"></i>
+                    <a href="#"><span>Home</span></a>
+                </div>
+                <div class="calendar">
+                    <i class="bi bi-calendar4"></i>
+                    <a href="#"><span>Calendar</span></a>
+                </div>
+            </div>
+            <div class="option-2">
+                <div class="enroll">
+                    <i class="bi bi-mortarboard"></i>
+                    <a href="#"><span>Enrolled</span></a>
+                </div>
+                <div class="todo">
+                    <i class="bi bi-card-checklist"></i>
+                    <a href="#"><span>Todo</span></a>
+                </div>
+                <div class="class-1">
+                    <span class="alphabat background-color-green">W</span>
+                    <a href="#"><span class="class-heading">Web & Mobile Development...</span><br><span>Batch 11 Sec - J</span></a>
+                </div>
+               
+            </div>
+            <div class="option-3">
+                <div class="archive">
+                    <i class="bi bi-archive"></i>
+                    <a href="#"><span>Todo</span></a>
+                </div>
+                <div class="setting">
+                    <i class="bi bi-gear"></i>
+                    <a href="#"><span>Setting</span></a>
+                </div>
+            </div>
+        </aside>
+        <div class="section-card">
+            <div class="card-container">
+                <div class="card background01">
+                    <div class="card-content">
+                        <h3>Web & App Development...</h3>
+                        <span class="batch-and-section">Batch 11 Sec-J</span><br>
+                        <span>Muhammad Rizwan Bhatti</span>
+                    </div>
+                    <div class="mentor-image">
+                        <img src="d:\images\img.jpg" alt="Sir Rizwan">
+                    </div>
+                    <div class="empty">
+                        <br><br><br>
+                        <br><br><br>
+                    </div>
+                    <div class="icon">
+                        <i class="bi bi-person-square"></i>
+                        <i class="bi bi-archive"></i>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </main>
+</body>
+</html>
